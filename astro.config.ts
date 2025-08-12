@@ -23,7 +23,10 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 
 export default defineConfig({
   output: 'static',
-
+  // ↓↓↓↓↓ 这是你需要添加或修改的核心部分 ↓↓↓↓↓
+  site: 'https://banbig.github.io',
+  base: '/', // 因为你的仓库名是 banbig.github.io，所以 base 必须是根路径 '/'
+  // ↑↑↑↑↑ 请确保上面这两行配置存在且正确 ↑↑↑↑↑
   integrations: [
     tailwind({
       applyBaseStyles: false,
